@@ -1,0 +1,8 @@
+#!/bin/sh
+JAR_PATH=$1
+CLASS=$2
+ZK_CONNECT=$3
+GROUP=$3
+TOPIC=$4
+NUM_THREADS=$5
+$SPARK_HOME/bin/spark-submit.sh --master local[4] --class $CLASS $JAR_PATH $ZK_CONNECT $GROUP $TOPIC $NUM_THREADS
